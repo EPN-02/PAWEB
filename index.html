@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>HTML Table Exercise</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 16px;
+            text-align: center; 
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3">ORE</th>
+                    <th colspan="2">ME</th>
+                </tr>
+                <tr>
+                    <th colspan="2">3431</th>
+                </tr>
+                <tr>
+                    <th>3431a</th>
+                    <th>3431b</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Luni</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>08-09</td>
+                    <td rowspan="2">Fiabilitate, C103, Atanasoae Pavel</td>
+                    <td rowspan="3">TRA, C101 Buzduga C</td>
+                </tr>
+                <tr>
+                    <td>09-10</td>
+                </tr>
+                <tr>
+                    <td>10-11</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+            <section>
+                <h2>Nested Navigation Menu</h2>
+                <ul>
+                    <li>
+                        <a >Search</a>
+                        <ul>
+                            <li><a href="https://www.google.com">Google</a></li>
+                            <li><a href="https://www.bing.com">Bing</a></li>
+                            <li><a href="https://www.reddit.com">Reddit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>USV</a>
+                        <ul>
+                            <li><a href="https://www.usv.ro">Main page</a></li>
+                            <li><a href="https://fiesc.usv.ro">FIESC</a></li>
+                            <li><a href="https://usv.ro/studenti/ghidul-studentului-usv/">Student guide</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Form Implementation for Parameter Hijacking</h2>
+                <form action="https://www.google.com/search" method="get">
+                    <label for="query">Search Query:</label>
+                    <input type="text" id="query" name="q">
+                    <input type="submit" value="Submit">
+                </form>
+
+                <h2>Google Translate Parameter Hijacking</h2>
+                <form action="https://translate.google.com/" method="get">
+                    <label for="source-lang">Source Language:</label>
+                    <select name="sl" id="source-lang">
+                        <option value="en">English</option>
+                        <option value="ro">Romanian</option>
+                        <option value="it">Italian</option>
+                    </select><br>
+                    <label for="target-lang">Target Language:</label>
+                    <select name="tl" id="target-lang">
+                        <option value="en">English</option>
+                        <option value="ro">Romanian</option>
+                        <option value="it">Italian</option>
+                    </select><br>
+                    <label for="text">Text to Translate:</label>
+                    <input type="text" id="text" name="text"><br>
+                    <input type="hidden" name="op" value="translate">
+                    <input type="submit" value="Translate">
+                </form>
+            </section>
+</body>
+</html>
